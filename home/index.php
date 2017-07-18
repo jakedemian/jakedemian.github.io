@@ -1,3 +1,8 @@
+<?php
+    require($_SERVER['DOCUMENT_ROOT'] . "/EnvironmentSetup.php");
+
+    $conn = GetMysqliConnection();
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -5,6 +10,6 @@
     <meta todo="yes"/>
 </head>
 <body>
-    Jake Demian is cool.
+    
 </body>
 </html>
