@@ -30,11 +30,11 @@ function linkClicked(ele){
     var key = ele.getAttribute("data-link-key");
     if(!!key){
         var content = document.getElementById(key);
-        document.getElementById("content").innerHTML = content.innerHTML;
+        document.getElementById("textContent").innerHTML = content.innerHTML;
     }
 }
 
 window.onload = function(){
-    document.getElementById("content").innerHTML = "";
+    document.getElementById("textContent").innerHTML = "";
     setTimeout(function(){typeName(0)}, 1000);
 }

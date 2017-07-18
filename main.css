@@ -12,6 +12,10 @@
     margin: 0 auto;
 }
 
+.mainContent{
+    margin-top: 150px;
+}
+
 .left{
     width: 50%;
     float: left;
@@ -20,6 +24,7 @@
 
 .right{
     margin-left: 50%;
+    text-transform: none;
 }
 
 #name{
