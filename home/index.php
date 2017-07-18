@@ -10,6 +10,11 @@
     <meta todo="yes"/>
 </head>
 <body>
-    
+    <div class="header" id="header">
+    </div>
+    <div class="content">
+    </div>
+    <div class="footer" id="footer">
+    </div>
 </body>
 </html>
