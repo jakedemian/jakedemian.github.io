@@ -4,12 +4,19 @@
 
 *{
     font-family: 'Montserrat', sans-serif;
-    text-transform: uppercase;
 }
 
 .wrapper{
     max-width: 800px;
     margin: 0 auto;
+}
+
+ul,li{
+    list-style: none;
+}
+
+h1{
+    text-transform: uppercase;
 }
 
 .mainContent{
@@ -27,6 +34,25 @@
     text-transform: none;
 }
 
+
+
+/*skills list*/
+.skillName {
+    width: 100px;
+    display: inline-block;
+}
+
+.skill-value{
+    display: inline-block;
+    height: 16px;
+    width: 50px;
+    background-color: green;
+}
+
+
+.hiddenContent{
+    text-transform: none;
+}
 #name{
     -webkit-user-select: none; /* Chrome/Safari */        
     -moz-user-select: none; /* Firefox */
