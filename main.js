@@ -10,9 +10,9 @@ var barColors = {
 
 function typeName(endIdx){
     var name = Constants.NAME;
-    var nameElement = document.getElementById("name");
+    var nameElement = $("#name");
     
-    nameElement.innerHTML = name.substring(0, endIdx) + "_";
+    nameElement.html(name.substring(0, endIdx) + "_");
     endIdx++;
 
     if(endIdx <= name.length){
@@ -23,41 +23,48 @@ function typeName(endIdx){
 }
 
 function toggleCursorFlash(){
-    var nameElement = document.getElementById("name");
-    var nameStr = nameElement.innerHTML.trim();
+    var nameElement = $("#name");
+    var nameStr = nameElement.html().trim();
     var suffix = nameStr.indexOf("_") == -1 ? "_" : " ";
 
-    nameElement.innerHTML = Constants.NAME + suffix;
+    nameElement.html(Constants.NAME + suffix);
     setTimeout(function(){toggleCursorFlash()}, 500);
 }
 
 function initSkillsContent(){
-    var skillValueBars = document.getElementsByClassName("skill-value");
+    var skillValueBars = $(".skill-value");
     for(var i = 0; i < skillValueBars.length; i++){
         var bar = skillValueBars[i];
-        var thisValue = bar.getAttribute("data-skill-value");
+        var thisValue = $(bar).attr("data-skill-value");
         if(!!thisValue){
             var color = barColors[thisValue];
             var calculatedWidth = Number(thisValue) * 20;
-            bar.style.width = String(calculatedWidth) + "px";
-            bar.style.backgroundColor = color;
+            $(bar).width(0);
+            $(bar).animate({width: calculatedWidth}, 500 );
+            //$(bar).width(String(calculatedWidth) + "px");
+            $(bar).css('background-color', color);
         }
     }
 }
 
 function linkClicked(ele){
-    var key = ele.getAttribute("data-link-key");
+    var key = $(ele).attr("data-link-key");
     if(!!key){
-        var content = document.getElementById(key);
-        document.getElementById("textContent").innerHTML = content.innerHTML;
+        var content = $("#" + key);
 
-        if(key == "skillset"){
-            initSkillsContent();
-        }
+        $("#textContent").fadeOut(100, function(){
+            $("#textContent").html(content.html());
+
+            if(key == "skillset"){
+                initSkillsContent();
+            }
+
+            $("#textContent").fadeIn(100);
+        });        
     }
 }
 
-window.onload = function(){
-    document.getElementById("textContent").innerHTML = "";
+$(document).ready(function(){
+    $("#textContent").html("");
     setTimeout(function(){typeName(0)}, 1000);
-}
+});
