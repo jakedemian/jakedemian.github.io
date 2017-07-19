@@ -66,5 +66,5 @@ function linkClicked(ele){
 
 $(document).ready(function(){
     $("#textContent").html("");
-    setTimeout(function(){typeName(0)}, 1000);
+    setTimeout(function(){typeName(0)}, 300);
 });
