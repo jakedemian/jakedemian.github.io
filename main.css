@@ -1,6 +1,7 @@
 @import url("normalize.css");
 @import url('https://fonts.googleapis.com/css?family=Montserrat');
 @import url('mainlinks.css');
+@import url('footer.css');
 
 *{
     font-family: 'Montserrat', sans-serif;
@@ -13,14 +14,26 @@
 
 ul,li{
     list-style: none;
+
+    /*OVERRIDES normalize.css*/
+    padding-left: 0px;
 }
 
 h1{
     text-transform: uppercase;
 }
 
+img{
+    user-drag: none; 
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-drag: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+}
+
 .mainContent{
-    margin-top: 150px;
+    margin-top: 80px;
 }
 
 .left{
@@ -35,9 +48,28 @@ h1{
     padding-top: 25px;
 }
 
+.link{
+    text-decoration: none;
+    color: #4286f4;
+    opacity: 0.7;
+    margin-left: 10px;
+    position: relative;
+    top: -3px;
+}
 
+.link:hover{
+    opacity: 1;
+}
+
+/*about*/
+.aboutImg{
+    border-radius: 5px;
+}
 
 /*skills list*/
+.skill{
+    padding-left: 25px;
+}
 .skillName {
     width: 100px;
     display: inline-block;
@@ -54,6 +86,7 @@ h1{
 .hiddenContent{
     text-transform: none;
 }
+
 #name{
     -webkit-user-select: none; /* Chrome/Safari */        
     -moz-user-select: none; /* Firefox */
@@ -64,4 +97,8 @@ h1{
     user-select: none;
 
     cursor: default;
+}
+
+#tempTxt{
+    opacity: 0;
 }

@@ -64,7 +64,37 @@ function linkClicked(ele){
     }
 }
 
+function copySensitiveText(txt){
+    $("<input/>", {
+        type: "textarea",
+        id: "tempTxt",
+        value: txt
+    }).appendTo("body").select();
+
+    try{
+        var copySuccess = document.execCommand("copy");
+    } catch(err){
+        console.error(err);
+    }
+
+    $("#tempTxt").remove();
+}
+
+function copyPhone(){
+    var npaCode = "440";
+    var centralOfficeCode = "897";
+    var subscriberNum = "1768";
+    copySensitiveText(npaCode + centralOfficeCode + subscriberNum);
+}
+
+function copyEmail(){
+    var localPart = "jakedemian";
+    var domain = "gmail.com";
+    copySensitiveText(localPart + "@" + domain);
+}
+
 $(document).ready(function(){
     $("#textContent").html("");
     setTimeout(function(){typeName(0)}, 300);
+    $($(".mainLink")[0]).click();
 });
