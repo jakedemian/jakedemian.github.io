@@ -1,3 +1,7 @@
+.contactContent{
+    margin-left: 20px;
+}
+
 .contactImg{
     user-drag: none; 
     user-select: none;

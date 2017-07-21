@@ -14,5 +14,5 @@
     display: inline-block;
     height: 16px;
     width: 50px;
-    background-color: green;
+    border-radius: 2px;
 }

@@ -3,9 +3,9 @@ var Constants = {
 }
 
 var barColors = {
-    "5":"#4bed7e",
-    "4":"#61ed4b",
-    "3":"#81ed4b"
+    "5":"#4286f4",
+    "4":"#4286f4",
+    "3":"#4286f4"
 }
 
 function typeName(endIdx){
@@ -41,7 +41,6 @@ function initSkillsContent(){
             var calculatedWidth = Number(thisValue) * 60;
             $(bar).width(0);
             $(bar).animate({width: calculatedWidth}, 500 );
-            //$(bar).width(String(calculatedWidth) + "px");
             $(bar).css('background-color', color);
         }
     }
