@@ -1,0 +1,18 @@
+.skillCategoriesList{
+    margin-left: 20px;
+}
+
+.skill{
+    padding-left: 25px;
+}
+.skillName {
+    width: 100px;
+    display: inline-block;
+}
+
+.skill-value{
+    display: inline-block;
+    height: 16px;
+    width: 50px;
+    background-color: green;
+}

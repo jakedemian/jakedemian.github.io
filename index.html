@@ -3,7 +3,7 @@
 <html>
     <head>
         <title>Jake Demian</title>
-        <link rel="stylesheet" type="text/css" href="main.css">
+        <link rel="stylesheet" type="text/css" href="css/main.css">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
         <script type="text/javascript" src="./main.js"></script>
     </head>
@@ -30,12 +30,12 @@
                 <div id="about">
                     <h2>About</h2>
                     <p>This is where I'll put my About Me stuff.  Uhh, I'm 25, Computer Engineer, etc etc.</p>
-                    <img class="aboutImg" src="http://i.imgur.com/cM8WTgl.png" width="250px"/>
+                    <img class="aboutImg" src="assets/self_pic.jpg" width="250px"/>
                 </div>
                 <div id="skillset">
+                    <h2>Skillset</h2>
                     <ul class="skillCategoriesList">
                         <li class="skillCategory">
-                            <h2>Skillset</h2>
                             <h3>Backend</h3>
                             <ul class="skillsList">
                                 <li class="skill">
@@ -54,14 +54,14 @@
                                 </li>
                                 <li class="skill">
                                     <div class="skillName">
-                                        <span>C++</span>
+                                        <span>C#</span>
                                     </div>
-                                    <div class="skill-value" data-skill-value="3"></div>
-                                    <span>3</span>
+                                    <div class="skill-value" data-skill-value="4"></div>
+                                    <span>4</span>
                                 </li>
                                 <li class="skill">
                                     <div class="skillName">
-                                        <span>C#</span>
+                                        <span>C++</span>
                                     </div>
                                     <div class="skill-value" data-skill-value="3"></div>
                                     <span>3</span>
@@ -157,6 +157,61 @@
                 </div>
                 <div id="experience">
                     <h2>Experience</h2>
+                    <ul class="experienceList">
+                        <li class="expEntry">
+                            <div class="expInfo">
+                                <div class="expTitleContainer">
+                                    <h4>Nanotronics Imaging</h4>
+                                    <p>Internship, Winter-Summer 2013</p>
+                                    <img src="assets/nano_logo.png" width="70px"/>
+                                </div>  
+                                <div class="expDescContainer">
+                                    <p>
+                                        Designed and developed a desktop application that controlled an automated 
+                                        silicon wafer scanning system.  Worked purely in C++ and learned the ropes of 
+                                        working on a large scale project with a team of engineers.
+                                    </p>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="expEntry">
+                            <div class="expInfo">
+                                <div class="expTitleContainer">
+                                    <h4>STERIS Corporation</h4>
+                                    <p>Internship, 2014-2015</p>
+                                    <img src="assets/steris_logo.png" width="70px"/>
+                                </div>  
+                                <div class="expDescContainer">
+                                    <p>
+                                        STERIS is an industry leader in the health and medicine industry.  
+                                        I helped design and program both the hardware and software aspects 
+                                        of a new surgical lighting system.  I used Visual Basic for the 
+                                        applications and C++ for the embedded systems programming.
+                                    </p>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="expEntry">
+                            <div class="expInfo">
+                                <div class="expTitleContainer">
+                                    <h4>SapientRazorfish</h4>
+                                    <p>Software Engineer, 2015-Present</p>
+                                    <img src="assets/sapientrazorfish_logo.png" width="70px"/>
+                                </div>  
+                                <div class="expDescContainer">
+                                    <p>
+                                        At SapientRazorfish, I work on creating and maintaining websites for large companies.  
+                                        I design, implement, and maintain the e-commerce backend of both the 
+                                        <a class="link" href="http://www.sherwin-williams.com">Sherwin-Williams</a> 
+                                        and 
+                                        <a class="link" href="http://www.steris.com/healthcare/service-and-service-parts/steris-service-parts/">STERIS Service Parts</a>
+                                        websites.  We use the Websphere Commerce platform, which is a Java-based programming
+                                         stack.  Additionally, I use Angular, Struts, jQuery, and SASS on a regular basis.
+                                    </p>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
                 </div>
                 <div id="projects">
                    <h2>Projects</h2>
@@ -170,11 +225,11 @@
                     <br />
 
                     <h4>E-mail</h4>
-                    <img src="./my_email.png" />
+                    <img class="contactImg" src="assets/my_email.png" />
                     <a class="link" href="javascript:void(0);" onclick="copyEmail();">Copy</a>
 
                     <h4>Phone (call or text)</h4>
-                    <img src="./my_phone.png" />
+                    <img class="contactImg" src="assets/my_phone.png" />
                     <a class="link" href="javascript:void(0);" onclick="copyPhone();">Copy</a>
                 </div>
             </div>

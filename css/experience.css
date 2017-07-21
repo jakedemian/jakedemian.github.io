@@ -1,0 +1,36 @@
+.expInfo{
+    display: block;
+    height: 200px;
+}
+
+.expTitleContainer{
+    float: left;
+    width: 35%;
+    text-align: center;
+
+}
+
+.expTitleContainer h4{
+    padding-bottom: 0;
+    margin-bottom: 0;
+}
+
+.expTitleContainer p{
+    font-size: 10px;
+    color: #333;
+    padding: 0;
+    margin: 5px 0;
+}
+
+.expTitleContainer img{
+    margin-top: 15px;
+    margin-bottom: -15px;
+}
+
+.expDescContainer{
+    padding-top: 8px;
+    margin-left: 35%;
+}
+
+
+

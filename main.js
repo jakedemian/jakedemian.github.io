@@ -38,7 +38,7 @@ function initSkillsContent(){
         var thisValue = $(bar).attr("data-skill-value");
         if(!!thisValue){
             var color = barColors[thisValue];
-            var calculatedWidth = Number(thisValue) * 20;
+            var calculatedWidth = Number(thisValue) * 60;
             $(bar).width(0);
             $(bar).animate({width: calculatedWidth}, 500 );
             //$(bar).width(String(calculatedWidth) + "px");

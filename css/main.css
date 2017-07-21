@@ -1,0 +1,42 @@
+@import url("normalize.css");
+@import url('https://fonts.googleapis.com/css?family=Montserrat');
+@import url("layout.css");
+@import url('mainlinks.css');
+@import url('footer.css');
+@import url("about.css");
+@import url('skillset.css');
+@import url("experience.css");
+@import url("contact.css");
+
+*{
+    font-family: 'Montserrat', sans-serif;
+}
+
+ul,li{
+    list-style: none;
+    padding-left: 0px; /*OVERRIDES normalize.css*/
+}
+
+.link{
+    text-decoration: none;
+    color: #4286f4;
+    opacity: 1;
+    position: relative;
+}
+
+.link:hover{
+    opacity: 0.7;
+}
+
+#name{
+    text-transform: uppercase;
+    cursor: default;
+
+    -webkit-user-select: none; /* Chrome/Safari */        
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* IE10+ */
+    -o-user-select: none;
+    user-select: none;
+}
+
+
