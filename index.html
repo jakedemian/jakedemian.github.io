@@ -18,18 +18,29 @@
                     <a href="javascript:void(0);" onclick="javascript:linkClicked(this);" data-link-key="skillset" class="mainLink">Skillset</a><br/>
                     <a href="javascript:void(0);" onclick="javascript:linkClicked(this);" data-link-key="experience" class="mainLink">Experience</a><br/>
                     <a href="javascript:void(0);" onclick="javascript:linkClicked(this);" data-link-key="contact" class="mainLink">Contact</a><br/>
-                </div>
-                
-                <div id="textContent" class="right">
-                    
-                </div>
+                </div>                
+                <div id="textContent" class="right"></div>
             </div>
 
             <div class="hiddenContent" style="display: none;">
                 <div id="about">
                     <h2>About</h2>
-                    <p>This is where I'll put my About Me stuff.  Uhh, I'm 25, Computer Engineer, etc etc.</p>
-                    <img class="aboutImg" src="assets/self_pic.jpg" width="250px"/>
+                    <div class="aboutMain">
+                        <div class="aboutMainLeft">
+                            <p>Nice to meet you!  I am a Software Engineer and Web Developer currently living in Boston, MA.</p>
+                            <p>When I'm not busy programming at work, you'll likely find me programming at home.  I create video 
+                                games, design embedded software systems, and create web and desktop applications for fun!</p>
+                        </div>
+                        <div class="aboutMainRight">
+                            <img class="aboutImg" src="assets/self_pic.jpg"/>
+                        </div>
+                    </div>
+                    <div class="dividerContainer">
+                        <div class="divider"></div>
+                    </div>
+                    <div class="aboutMeJsonContainer">
+                        <pre id="aboutMeJson"></pre>
+                    </div>
                 </div>
                 <div id="skillset">
                     <h2>Skillset</h2>

@@ -1,11 +1,37 @@
 var Constants = {
     NAME : "Jake Demian"
-}
+};
 
 var barColors = {
     "5":"#4286f4",
     "4":"#4286f4",
     "3":"#4286f4"
+
+};
+
+var bornDate = new Date(1991, 11, 9, 0, 6, 0, 0);
+var nowDate = new Date();
+
+var aboutMeJson = {
+    "name":"Jacob R. Demian",
+    "age": getExactAge().toFixed(10),
+    "title":"Software Engineer",
+    "pets":"dog",
+    "interests":[
+        "programming",
+        "working out",
+        "watching space documentaries",
+        "video games"
+    ],
+    "numOfTimesWatchedSuperbad": 37,
+    "numOfSandwichesEaten": (Math.floor(getExactAge() * 365))
+}
+
+var currentPage = null;
+
+function getExactAge(){
+    nowDate = new Date();
+    return (nowDate-bornDate )/1000/60/60/24/365;
 }
 
 function typeName(endIdx){
@@ -31,6 +57,17 @@ function toggleCursorFlash(){
     setTimeout(function(){toggleCursorFlash()}, 500);
 }
 
+function initAboutContent(){
+    aboutMeJson.age = getExactAge().toFixed(10);
+    $("#aboutMeJson").html(JSON.stringify(aboutMeJson, undefined, 2));
+    
+    if(currentPage == "about"){
+        setTimeout(function(){
+            initAboutContent();
+        }, 10);
+    }
+}
+
 function initSkillsContent(){
     var skillValueBars = $(".skill-value");
     for(var i = 0; i < skillValueBars.length; i++){
@@ -53,8 +90,11 @@ function linkClicked(ele){
 
         $("#textContent").fadeOut(100, function(){
             $("#textContent").html(content.html());
+            currentPage = key;
 
-            if(key == "skillset"){
+            if(key == "about"){
+                initAboutContent();
+            } else if(key == "skillset"){
                 initSkillsContent();
             }
 

@@ -1,3 +1,29 @@
+.aboutMainLeft{
+    float: left;
+    width: 50%;
+    line-height: 1.5;
+}
+
+.aboutMainRight{
+    margin-left: 50%;
+}
+
 .aboutImg{
-    border-radius: 5px;
+    border-radius: 100%;
+    width: 200px;
+}
+
+.dividerContainer{
+    height: 10px;
+    width: 100%;
+    margin-top: 70px;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.divider{
+    width: 150px;
+    height: 2px;
+    background-color: #4286f4;
+    margin: 0 auto;
 }
