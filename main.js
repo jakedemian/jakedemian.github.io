@@ -12,7 +12,7 @@ function typeName(endIdx){
     var name = Constants.NAME;
     var nameElement = $("#name");
     
-    nameElement.html(name.substring(0, endIdx) + "_");
+    nameElement.html(name.substring(0, endIdx) + "<span id='underscore'>_</span>");
     endIdx++;
 
     if(endIdx <= name.length){
@@ -25,7 +25,7 @@ function typeName(endIdx){
 function toggleCursorFlash(){
     var nameElement = $("#name");
     var nameStr = nameElement.html().trim();
-    var suffix = nameStr.indexOf("_") == -1 ? "_" : " ";
+    var suffix = nameStr.indexOf("_") == -1 ? "<span id='underscore'>_</span>" : " ";
 
     nameElement.html(Constants.NAME + suffix);
     setTimeout(function(){toggleCursorFlash()}, 500);
