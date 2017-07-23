@@ -1,19 +1,17 @@
+.experienceList{
+    margin: 0 auto;
+}
+
 .expInfo{
     display: block;
     height: 200px;
-
-    -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
-    filter: grayscale(100%);
-    transition: all .3s ease;
-
     cursor: pointer;
+    border-radius: 10px;
+
+    transition: all .3s ease;
 }
 
 .expInfo:hover{
-    -webkit-filter: grayscale(0%); /* Safari 6.0 - 9.0 */
-    filter: grayscale(0%);
-    background-color: #ddd;
-
     -moz-transform: scale(1.1);
     -webkit-transform: scale(1.1);
     transform: scale(1.1);

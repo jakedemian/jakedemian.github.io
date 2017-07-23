@@ -142,5 +142,5 @@ function copyEmail(ele){
 $(document).ready(function(){
     $("#textContent").html("");
     setTimeout(function(){typeName(0)}, 300);
-    $($(".mainLink")[0]).click();
+    $($(".mainLink")[0]).click();    
 });
