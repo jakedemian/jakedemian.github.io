@@ -119,17 +119,24 @@ function copySensitiveText(txt){
     $("#tempTxt").remove();
 }
 
-function copyPhone(){
+function postCopy(ele){
+    $(ele).attr("class", "copyLinkPost");    
+    setTimeout(function(){$(ele).attr("class", "copyLink");}, 2000);
+}
+
+function copyPhone(ele){
     var npaCode = "440";
     var centralOfficeCode = "897";
     var subscriberNum = "1768";
     copySensitiveText(npaCode + centralOfficeCode + subscriberNum);
+    postCopy(ele);
 }
 
-function copyEmail(){
+function copyEmail(ele){
     var localPart = "jakedemian";
     var domain = "gmail.com";
     copySensitiveText(localPart + "@" + domain);
+    postCopy(ele);
 }
 
 $(document).ready(function(){

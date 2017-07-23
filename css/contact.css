@@ -9,6 +9,43 @@
     -webkit-user-drag: none;
     -webkit-user-select: none;
     -ms-user-select: none;
+
+    margin-bottom: 5px;
+}
+
+.copyLink{
+    text-decoration: none;
+    background-color: #4286f4;
+    color: #fff;
+    border: 2px solid #fff;
+    border-radius: 6px;
+    padding: 5px 15px;
+    display: block;
+    width: 60px;
+    text-align: center;
+    content: "Copy";
+    transition: all .3s ease;
+}
+
+.copyLink::after{
+    content: "Copy";
+}
+
+.copyLinkPost{
+    text-decoration: none;
+    background-color: #fff;
+    color: #4286f4;
+    border: 2px solid #4286f4;
+    border-radius: 6px;
+    padding: 5px 15px;
+    display: block;
+    width: 60px;
+    text-align: center;
+    transition: all .3s ease;
+}
+
+.copyLinkPost::after{
+    content: "Copied!";
 }
 
 #tempTxt{
