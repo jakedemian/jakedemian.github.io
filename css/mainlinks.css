@@ -25,11 +25,11 @@
   z-index:-1;
 }
 
-.mainLink:hover:after {
+.selected:after,.mainLink:hover:after {
   transform: translate3d(0,0,0);
   transition: transform .3s cubic-bezier(0.11, 0.7, 0, 1);
 }
 
-.mainLink:hover{
+.selected,.mainLink:hover{
   color: #fff;
 }

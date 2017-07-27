@@ -86,6 +86,10 @@ function initSkillsContent(){
 function linkClicked(ele){
     var key = $(ele).attr("data-link-key");
     if(!!key){
+        var currentlySelected = $(".selected")[0];
+        $(currentlySelected).removeClass("selected");
+        $(ele).addClass("selected");
+
         var content = $("#" + key);
 
         $("#textContent").fadeOut(100, function(){
