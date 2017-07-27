@@ -31,6 +31,8 @@ ul,li{
 
 h2{
     margin: 0 auto;
+    font-size: 18px;
+    text-transform: uppercase;
 }
 
 #name{
