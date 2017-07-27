@@ -85,9 +85,9 @@ function initSkillsContent(){
 
 function linkClicked(ele){
     var key = $(ele).attr("data-link-key");
-    if(!!key){
-        var currentlySelected = $(".selected")[0];
-        $(currentlySelected).removeClass("selected");
+    if(!!key && currentPage != key){
+        var currentlyHighlighted = $(".selected")[0];
+        $(currentlyHighlighted).removeClass("selected");
         $(ele).addClass("selected");
 
         var content = $("#" + key);
