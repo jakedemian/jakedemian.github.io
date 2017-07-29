@@ -24,6 +24,7 @@ var aboutMeJson = {
 }
 
 var currentPage = null;
+var mainContentDiv = null;
 
 function getExactAge() {
     nowDate = new Date();
@@ -65,7 +66,11 @@ function initAboutContent() {
 }
 var temp = [];
 function initSkillsContent() {
-    var skillValueBars = $(".skill-value");
+    // filter out bars in the template html so that we aren't modifying things we dont need to
+    var skillValueBars = $(".skill-value").filter(function(){
+        return $.contains(mainContentDiv, this);
+    });
+
     for (var i = 0; i < skillValueBars.length; i++) {
         var bar = skillValueBars[i];
         var thisValue = $(bar).attr("data-skill-value");
@@ -144,8 +149,17 @@ function copyEmail(ele) {
     postCopy(ele);
 }
 
+function filterTemplateElements(elements){
+    for(var i = 0; i < elements.length; i++){
+        if(!mainContentDiv.contains(elements[i])){
+            elements.remove
+        }
+    }
+}
+
 $(document).ready(function () {
-    $("#textContent").html("");
+    mainContentDiv = $("#textContent")[0];
+    $(mainContentDiv).html("");
     setTimeout(function () { typeName(0) }, 300);
     $($(".mainLink")[0]).click(); // default to about page
 
