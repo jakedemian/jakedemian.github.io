@@ -52,121 +52,15 @@
                 <div id="skillset" ng-controller="SkillsetController">
                     <h2>{{title}}</h2>
                     <ul class="skillCategoriesList">
-                        <li class="skillCategory">
-                            <h3>Backend</h3>
+                        <li class="skillCategory" ng-repeat="category in skillsetCategories">
+                            <h3>{{category.title}}</h3>
                             <ul class="skillsList">
-                                <li class="skill">
+                                <li class="skill" ng-repeat="skill in category.skills">
                                     <div class="skillName">
-                                        <span>Java</span>
+                                        <span>{{skill.name}}</span>
                                     </div>
-                                    <div class="skill-value" data-skill-value="5"></div>
-                                    <span>5</span>
-                                </li>
-                                <li class="skill">
-                                    <div class="skillName">
-                                        <span>PHP</span>
-                                    </div>
-                                    <div class="skill-value" data-skill-value="4"></div>
-                                    <span>4</span>
-                                </li>
-                                <li class="skill">
-                                    <div class="skillName">
-                                        <span>C#</span>
-                                    </div>
-                                    <div class="skill-value" data-skill-value="4"></div>
-                                    <span>4</span>
-                                </li>
-                                <li class="skill">
-                                    <div class="skillName">
-                                        <span>C++</span>
-                                    </div>
-                                    <div class="skill-value" data-skill-value="3"></div>
-                                    <span>3</span>
-                                </li>
-                            </ul>
-                        </li>
-                        <li class="skillCategory">
-                            <h3>Frontend</h3>
-                            <ul class="skillsList">
-                                <li class="skill">
-                                    <div class="skillName">
-                                        <span>Javascript</span>
-                                    </div>
-                                    <div class="skill-value" data-skill-value="5"></div>
-                                    <span>5</span>
-                                </li>
-                                <li class="skill">
-                                    <div class="skillName">
-                                        <span>HTML</span>
-                                    </div>
-                                    <div class="skill-value" data-skill-value="5"></div>
-                                    <span>5</span>
-                                </li>
-                                <li class="skill">
-                                    <div class="skillName">
-                                        <span>CSS</span>
-                                    </div>
-                                    <div class="skill-value" data-skill-value="3"></div>
-                                    <span>3</span>
-                                </li>
-                            </ul>
-                        </li>
-                        <li class="skillCategory">
-                            <h3>Frameworks</h3>
-                            <ul class="skillsList">
-                                <li class="skill">
-                                    <div class="skillName">
-                                        <span>Angular</span>
-                                    </div>
-                                    <div class="skill-value" data-skill-value="4"></div>
-                                    <span>4</span>
-                                </li>
-                                <li class="skill">
-                                    <div class="skillName">
-                                        <span>jQuery</span>
-                                    </div>
-                                    <div class="skill-value" data-skill-value="4"></div>
-                                    <span>4</span>
-                                </li>
-                                <li class="skill">
-                                    <div class="skillName">
-                                        <span>React</span>
-                                    </div>
-                                    <div class="skill-value" data-skill-value="3"></div>
-                                    <span>3</span>
-                                </li>
-                                <li class="skill">
-                                    <div class="skillName">
-                                        <span>SASS</span>
-                                    </div>
-                                    <div class="skill-value" data-skill-value="3"></div>
-                                    <span>3</span>
-                                </li>
-                                <li class="skill">
-                                    <div class="skillName">
-                                        <span>Struts</span>
-                                    </div>
-                                    <div class="skill-value" data-skill-value="3"></div>
-                                    <span>3</span>
-                                </li>
-                            </ul>
-                        </li>
-                        <li class="skillCategory">
-                            <h3>Databases</h3>
-                            <ul class="skillsList">
-                                <li class="skill">
-                                    <div class="skillName">
-                                        <span>MySQL</span>
-                                    </div>
-                                    <div class="skill-value" data-skill-value="5"></div>
-                                    <span>5</span>
-                                </li>
-                                <li class="skill">
-                                    <div class="skillName">
-                                        <span>DB2</span>
-                                    </div>
-                                    <div class="skill-value" data-skill-value="5"></div>
-                                    <span>5</span>
+                                    <div class="skill-value" data-skill-value="{{skill.level}}"></div>
+                                    <span>{{skill.level}}</span>
                                 </li>
                             </ul>
                         </li>
