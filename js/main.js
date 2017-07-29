@@ -2,12 +2,8 @@ var Constants = {
     NAME: "Jake Demian"
 };
 
-var barColors = {
-    "5": "#4286f4",
-    "4": "#4286f4",
-    "3": "#4286f4"
-
-};
+var barColor = "#4286f4";
+var barScaleModifier = 30;
 
 var bornDate = new Date(1991, 11, 9, 0, 6, 0, 0);
 var nowDate = new Date();
@@ -67,19 +63,25 @@ function initAboutContent() {
         }, 10);
     }
 }
-
+var temp = [];
 function initSkillsContent() {
     var skillValueBars = $(".skill-value");
     for (var i = 0; i < skillValueBars.length; i++) {
         var bar = skillValueBars[i];
         var thisValue = $(bar).attr("data-skill-value");
         if (!!thisValue) {
-            var color = barColors[thisValue];
-            var calculatedWidth = Number(thisValue) * 60;
+            var color = barColor;
+            var calculatedWidth = Number(thisValue) * barScaleModifier;
             $(bar).width(0);
             $(bar).animate({ width: calculatedWidth }, 500);
             $(bar).css('background-color', color);
         }
+    }
+
+    var skillLines = $(".skillLine");
+    var skillsContainerHeight = $("#skillListContainer").height();
+    for(var i = 0; i < skillLines.length; i++){
+        $(skillLines[i]).height(skillsContainerHeight + "px");
     }
 }
 
@@ -95,14 +97,13 @@ function linkClicked(ele) {
         $("#textContent").fadeOut(100, function () {
             $("#textContent").html(content.html());
             currentPage = key;
-
-            if (key == "about") {
-                initAboutContent();
-            } else if (key == "skillset") {
-                initSkillsContent();
-            }
-
-            $("#textContent").fadeIn(100);
+            $("#textContent").fadeIn(100, function(){
+                if (key == "about") {
+                    initAboutContent();
+                } else if (key == "skillset") {
+                    initSkillsContent();
+                }
+            });
         });
     }
 }

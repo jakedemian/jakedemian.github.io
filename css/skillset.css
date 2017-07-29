@@ -1,3 +1,7 @@
+.skillListContainer{
+    position: relative;
+}
+
 .skillCategoriesList{
     margin-left: 20px;
 }
@@ -15,4 +19,24 @@
     height: 16px;
     width: 50px;
     border-radius: 2px;
+}
+
+.skillLine{
+    width: 1px;
+    background-color: #ccc;
+    position: absolute;
+    top: 0;
+    z-index: -1;
+}
+
+.skillLineDesc{
+    color: #ccc;
+    font-size: 10px;
+    white-space: nowrap;
+    display: block;
+    margin-top: -20px;
+    
+    -ms-transform: rotate(-35deg); /* IE 9 */
+    -webkit-transform: rotate(-35deg); /* Chrome, Safari, Opera */
+    transform: rotate(-35deg);
 }

@@ -6,19 +6,19 @@ app.controller("SkillsetController", ["$scope", function ($scope) {
       "skills": [
         {
           "name": "Java",
-          "level": 5
+          "level": 10
         },
         {
           "name": "PHP",
-          "level": 4
+          "level": 9
         },
         {
           "name": "C#",
-          "level": 4
+          "level": 9
         },
         {
           "name": "C++",
-          "level": 3
+          "level": 8
         }
       ]
     },
@@ -27,15 +27,15 @@ app.controller("SkillsetController", ["$scope", function ($scope) {
       "skills": [
         {
           "name": "Javascript",
-          "level": 5
+          "level": 10
         },
         {
           "name": "HTML",
-          "level": 5
+          "level": 9
         },
         {
           "name": "CSS",
-          "level": 3
+          "level": 8
         }
       ]
     },
@@ -44,23 +44,23 @@ app.controller("SkillsetController", ["$scope", function ($scope) {
       "skills": [
         {
           "name": "Angular",
-          "level": 4
+          "level": 9
         },
         {
           "name": "jQuery",
-          "level": 4
+          "level": 9
         },
         {
           "name": "SASS",
-          "level": 4
+          "level": 9
         },
         {
           "name": "Struts",
-          "level": 4
+          "level": 8
         },
         {
           "name": "React",
-          "level": 3
+          "level": 7
         }
       ]
     },
@@ -69,14 +69,37 @@ app.controller("SkillsetController", ["$scope", function ($scope) {
       "skills": [
         {
           "name": "MySQL",
-          "level": 5
+          "level": 10
         },
         {
           "name": "DB2",
-          "level": 5
+          "level": 10
         }
       ]
     }
   ];
-  
+
+  $scope.skillLines = [
+    {
+      "desc":"Never used",
+      "leftOffset": "148px"
+    },
+    {
+      "desc":"I've dabbled",
+      "leftOffset": "223px"
+    },
+    {
+      "desc":"I use this",
+      "leftOffset": "298px"
+    },
+    {
+      "desc":"I'm really good at this",
+      "leftOffset": "373px"
+    },
+    {
+      "desc":"I'm an expert at this",
+      "leftOffset": "448px"
+    }
+  ]
+
 }]);

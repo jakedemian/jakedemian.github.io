@@ -51,20 +51,24 @@
                 </div>
                 <div id="skillset" ng-controller="SkillsetController">
                     <h2>{{title}}</h2>
-                    <ul class="skillCategoriesList">
-                        <li class="skillCategory" ng-repeat="category in skillsetCategories">
-                            <h3>{{category.title}}</h3>
-                            <ul class="skillsList">
-                                <li class="skill" ng-repeat="skill in category.skills">
-                                    <div class="skillName">
-                                        <span>{{skill.name}}</span>
-                                    </div>
-                                    <div class="skill-value" data-skill-value="{{skill.level}}"></div>
-                                    <span>{{skill.level}}</span>
-                                </li>
-                            </ul>
-                        </li>
-                    </ul>
+                    <div class="skillListContainer" id="skillListContainer">
+                        <ul class="skillCategoriesList">
+                            <li class="skillCategory" ng-repeat="category in skillsetCategories">
+                                <h3>{{category.title}}</h3>
+                                <ul class="skillsList">
+                                    <li class="skill" ng-repeat="skill in category.skills">
+                                        <div class="skillName">
+                                            <span>{{skill.name}}</span>
+                                        </div>
+                                        <div class="skill-value" data-skill-value="{{skill.level}}"></div>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                        <div class="skillLine" ng-repeat="line in skillLines" style="left: {{line.leftOffset}};">
+                            <span class="skillLineDesc">{{line.desc}}</span>
+                        </div>
+                    </div>
                 </div>
                 <div id="experience" ng-controller="ExperienceController">
                     <h2>{{title}}</h2>
