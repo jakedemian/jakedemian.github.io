@@ -93,7 +93,7 @@ app.controller("SkillsetController", ["$scope", function ($scope) {
       "leftOffset": "298px"
     },
     {
-      "desc":"I'm really good at this",
+      "desc":"I'm pretty good at this",
       "leftOffset": "373px"
     },
     {
