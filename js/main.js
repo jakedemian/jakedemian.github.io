@@ -1,11 +1,11 @@
 var Constants = {
-    NAME : "Jake Demian"
+    NAME: "Jake Demian"
 };
 
 var barColors = {
-    "5":"#4286f4",
-    "4":"#4286f4",
-    "3":"#4286f4"
+    "5": "#4286f4",
+    "4": "#4286f4",
+    "3": "#4286f4"
 
 };
 
@@ -13,11 +13,11 @@ var bornDate = new Date(1991, 11, 9, 0, 6, 0, 0);
 var nowDate = new Date();
 
 var aboutMeJson = {
-    "name":"Jacob R. Demian",
+    "name": "Jacob R. Demian",
     "age": getExactAge().toFixed(10),
-    "title":"Software Engineer",
-    "pets":"dog",
-    "interests":[
+    "title": "Software Engineer",
+    "pets": "dog",
+    "interests": [
         "programming",
         "working out",
         "watching space documentaries",
@@ -29,106 +29,106 @@ var aboutMeJson = {
 
 var currentPage = null;
 
-function getExactAge(){
+function getExactAge() {
     nowDate = new Date();
-    return (nowDate-bornDate )/1000/60/60/24/365;
+    return (nowDate - bornDate) / 1000 / 60 / 60 / 24 / 365;
 }
 
-function typeName(endIdx){
+function typeName(endIdx) {
     var name = Constants.NAME;
     var nameElement = $("#name");
-    
+
     nameElement.html(name.substring(0, endIdx) + "<span id='underscore'>_</span>");
     endIdx++;
 
-    if(endIdx <= name.length){
-        setTimeout(function(){typeName(endIdx)}, 125);
+    if (endIdx <= name.length) {
+        setTimeout(function () { typeName(endIdx) }, 125);
     } else {
-        setTimeout(function(){toggleCursorFlash()}, 500);
+        setTimeout(function () { toggleCursorFlash() }, 500);
     }
 }
 
-function toggleCursorFlash(){
+function toggleCursorFlash() {
     var nameElement = $("#name");
     var nameStr = nameElement.html().trim();
     var suffix = nameStr.indexOf("_") == -1 ? "<span id='underscore'>_</span>" : " ";
 
     nameElement.html(Constants.NAME + suffix);
-    setTimeout(function(){toggleCursorFlash()}, 500);
+    setTimeout(function () { toggleCursorFlash() }, 500);
 }
 
-function initAboutContent(){
+function initAboutContent() {
     aboutMeJson.age = getExactAge().toFixed(10);
     $("#aboutMeJson").html(JSON.stringify(aboutMeJson, undefined, 2));
-    
-    if(currentPage == "about"){
-        setTimeout(function(){
+
+    if (currentPage == "about") {
+        setTimeout(function () {
             initAboutContent();
         }, 10);
     }
 }
 
-function initSkillsContent(){
+function initSkillsContent() {
     var skillValueBars = $(".skill-value");
-    for(var i = 0; i < skillValueBars.length; i++){
+    for (var i = 0; i < skillValueBars.length; i++) {
         var bar = skillValueBars[i];
         var thisValue = $(bar).attr("data-skill-value");
-        if(!!thisValue){
+        if (!!thisValue) {
             var color = barColors[thisValue];
             var calculatedWidth = Number(thisValue) * 60;
             $(bar).width(0);
-            $(bar).animate({width: calculatedWidth}, 500 );
+            $(bar).animate({ width: calculatedWidth }, 500);
             $(bar).css('background-color', color);
         }
     }
 }
 
-function linkClicked(ele){
+function linkClicked(ele) {
     var key = $(ele).attr("data-link-key");
-    if(!!key && currentPage != key){
+    if (!!key && currentPage != key) {
         var currentlyHighlighted = $(".selected")[0];
         $(currentlyHighlighted).removeClass("selected");
         $(ele).addClass("selected");
 
         var content = $("#" + key);
 
-        $("#textContent").fadeOut(100, function(){
+        $("#textContent").fadeOut(100, function () {
             $("#textContent").html(content.html());
             currentPage = key;
 
-            if(key == "about"){
+            if (key == "about") {
                 initAboutContent();
-            } else if(key == "skillset"){
+            } else if (key == "skillset") {
                 initSkillsContent();
             }
 
             $("#textContent").fadeIn(100);
-        });        
+        });
     }
 }
 
-function copySensitiveText(txt){
+function copySensitiveText(txt) {
     $("<input/>", {
         type: "textarea",
         id: "tempTxt",
         value: txt
     }).appendTo("body").select();
 
-    try{
+    try {
         var copySuccess = document.execCommand("copy");
-    } catch(err){
+    } catch (err) {
         console.error(err);
     }
 
     $("#tempTxt").remove();
 }
 
-function postCopy(ele){
-    $(ele).attr("class", "copyLinkPost");    
-    setTimeout(function(){$(ele).attr("class", "copyLink");}, 2000);
+function postCopy(ele) {
+    $(ele).attr("class", "copyLinkPost");
+    setTimeout(function () { $(ele).attr("class", "copyLink"); }, 2000);
 }
 
-function copyPhone(ele){
+function copyPhone(ele) {
     var npaCode = "440";
     var centralOfficeCode = "897";
     var subscriberNum = "1768";
@@ -136,20 +136,20 @@ function copyPhone(ele){
     postCopy(ele);
 }
 
-function copyEmail(ele){
+function copyEmail(ele) {
     var localPart = "jakedemian";
     var domain = "gmail.com";
     copySensitiveText(localPart + "@" + domain);
     postCopy(ele);
 }
 
-$(document).ready(function(){
+$(document).ready(function () {
     $("#textContent").html("");
-    setTimeout(function(){typeName(0)}, 300);
+    setTimeout(function () { typeName(0) }, 300);
     $($(".mainLink")[0]).click(); // default to about page
 
     // prevent main links from dragging
-    $('.mainLink').mousedown(function(e) {
+    $('.mainLink').mousedown(function (e) {
         e.preventDefault();
     });
 });
