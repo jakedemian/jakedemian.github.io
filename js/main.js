@@ -1,13 +1,14 @@
 var Constants = {
-    NAME: "Jake Demian"
+    NAME: "Jake Demian",
+    BAR_COLOR: "#4286f4",
+    BAR_SCALE_MODIFIER : 30,
+    BORN_DATE_TIME : new Date(1991, 11, 9, 0, 6, 0, 0)
 };
 
-var barColor = "#4286f4";
-var barScaleModifier = 30;
-
-var bornDate = new Date(1991, 11, 9, 0, 6, 0, 0);
+// the current date-time
 var nowDate = new Date();
 
+// the json that is printed to the DOM on the about page
 var aboutMeJson = {
     "name": "Jacob R. Demian",
     "age": getExactAge().toFixed(10),
@@ -23,14 +24,24 @@ var aboutMeJson = {
     "numOfSandwichesEaten": (Math.floor(getExactAge() * 365))
 }
 
+// the key of the current page
 var currentPage = null;
+
+// the div in which templates are copied to and displayed
 var mainContentDiv = null;
 
+/**
+ * Get my exact age
+ */
 function getExactAge() {
     nowDate = new Date();
-    return (nowDate - bornDate) / 1000 / 60 / 60 / 24 / 365;
+    return (nowDate - Constants.BORN_DATE_TIME) / 1000 / 60 / 60 / 24 / 365;
 }
 
+/**
+ * Type one letter of my name on the DOM
+ * @param {Integer} endIdx 
+ */
 function typeName(endIdx) {
     var name = Constants.NAME;
     var nameElement = $("#name");
@@ -45,6 +56,9 @@ function typeName(endIdx) {
     }
 }
 
+/**
+ * Flash the fake input cursor that typed my name, once the name has finished typing.
+ */
 function toggleCursorFlash() {
     var nameElement = $("#name");
     var nameStr = nameElement.html().trim();
@@ -54,6 +68,9 @@ function toggleCursorFlash() {
     setTimeout(function () { toggleCursorFlash() }, 500);
 }
 
+/**
+ * Initialize the about content and continuousy update the "about me" json
+ */
 function initAboutContent() {
     aboutMeJson.age = getExactAge().toFixed(10);
     $("#aboutMeJson").html(JSON.stringify(aboutMeJson, undefined, 2));
@@ -64,7 +81,11 @@ function initAboutContent() {
         }, 10);
     }
 }
-var temp = [];
+
+/**
+ * Initialize the skillsset page, including animating bar growth and adapting 
+ * the skill lines to the correct heights
+ */
 function initSkillsContent() {
     // filter out bars in the template html so that we aren't modifying things we dont need to
     var skillValueBars = $(".skill-value").filter(function(){
@@ -75,8 +96,8 @@ function initSkillsContent() {
         var bar = skillValueBars[i];
         var thisValue = $(bar).attr("data-skill-value");
         if (!!thisValue) {
-            var color = barColor;
-            var calculatedWidth = Number(thisValue) * barScaleModifier;
+            var color = Constants.BAR_COLOR;
+            var calculatedWidth = Number(thisValue) * Constants.BAR_SCALE_MODIFIER;
             $(bar).width(0);
             $(bar).animate({ width: calculatedWidth }, 500);
             $(bar).css('background-color', color);
@@ -90,6 +111,10 @@ function initSkillsContent() {
     }
 }
 
+/**
+ * Handle the user clicking a main navigation link.
+ * @param {Element Object} ele 
+ */
 function linkClicked(ele) {
     var key = $(ele).attr("data-link-key");
     if (!!key && currentPage != key) {
@@ -113,6 +138,10 @@ function linkClicked(ele) {
     }
 }
 
+/**
+ * Copy a sensitive string to the user's clipboard
+ * @param {String} txt 
+ */
 function copySensitiveText(txt) {
     $("<input/>", {
         type: "textarea",
@@ -129,11 +158,19 @@ function copySensitiveText(txt) {
     $("#tempTxt").remove();
 }
 
+/**
+ * Make the copy button the user just clicked display "Copied!" for a short time.
+ * @param {Element Object} ele 
+ */
 function postCopy(ele) {
     $(ele).attr("class", "copyLinkPost");
     setTimeout(function () { $(ele).attr("class", "copyLink"); }, 2000);
 }
 
+/**
+ * Copy my phone number the the user's clipboard
+ * @param {Element Object} ele 
+ */
 function copyPhone(ele) {
     var npaCode = "440";
     var centralOfficeCode = "897";
@@ -142,6 +179,10 @@ function copyPhone(ele) {
     postCopy(ele);
 }
 
+/**
+ * Copy my email address to the user's clipboard
+ * @param {Element Object} ele 
+ */
 function copyEmail(ele) {
     var localPart = "jakedemian";
     var domain = "gmail.com";
@@ -149,14 +190,9 @@ function copyEmail(ele) {
     postCopy(ele);
 }
 
-function filterTemplateElements(elements){
-    for(var i = 0; i < elements.length; i++){
-        if(!mainContentDiv.contains(elements[i])){
-            elements.remove
-        }
-    }
-}
-
+/********************************
+ * $(document).ready
+ ********************************/
 $(document).ready(function () {
     mainContentDiv = $("#textContent")[0];
     $(mainContentDiv).html("");
