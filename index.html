@@ -6,9 +6,16 @@
         <link rel="stylesheet" type="text/css" href="css/main.css">
         <link rel="stylesheet" href="assets/font-awesome-4.7.0/css/font-awesome.min.css">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-        <script type="text/javascript" src="./main.js"></script>
+        
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.7/angular.js"></script>
+        <script src="js/app.js"></script>
+        <script src="js/AboutController.js"></script>
+        <script src="js/SkillsetController.js"></script>
+        <script src="js/ExperienceController.js"></script>
+
+        <script type="text/javascript" src="js/main.js"></script>
     </head>
-    <body>
+    <body ng-app="mainApp">
         <div class="wrapper">
             <div class="mainContent">
                 <div class="left">
@@ -23,9 +30,9 @@
                 <div id="textContent" class="right"></div>
             </div>
 
-            <div class="hiddenContent" style="display: none;">
+            <div class="hiddenContent" style="display: none;" ng-controller="AboutController">
                 <div id="about">
-                    <h2>About</h2>
+                    <h2>{{title}}</h2>
                     <div class="aboutMain">
                         <div class="aboutMainLeft">
                             <p>Nice to meet you!  I'm a Software Engineer and Web Developer currently living in Boston, MA.</p>
@@ -43,8 +50,8 @@
                         <pre id="aboutMeJson"></pre>
                     </div>
                 </div>
-                <div id="skillset">
-                    <h2>Skillset</h2>
+                <div id="skillset" ng-controller="SkillsetController">
+                    <h2>{{title}}</h2>
                     <ul class="skillCategoriesList">
                         <li class="skillCategory">
                             <h3>Backend</h3>
@@ -166,8 +173,8 @@
                         </li>
                     </ul>
                 </div>
-                <div id="experience">
-                    <h2>Experience</h2>
+                <div id="experience" ng-controller="ExperienceController">
+                    <h2>{{title}}</h2>
                     <ul class="experienceList">
                         <li class="expEntry">
                             <div class="expInfo">
