@@ -36,15 +36,14 @@
     margin: 5px 0;
 }
 
-.expTitleContainer img{
-    margin-top: 15px;
-    margin-bottom: -15px;
-}
-
 .expDescContainer{
     padding-top: 8px;
     margin-left: 35%;
 }
 
+.expLogo{
+    margin-top: 40px;
+    width: 70px;
+}
 
 
