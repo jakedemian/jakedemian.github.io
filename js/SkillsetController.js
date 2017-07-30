@@ -10,15 +10,15 @@ app.controller("SkillsetController", ["$scope", function ($scope) {
         },
         {
           "name": "PHP",
-          "level": 9
+          "level": 8
         },
         {
           "name": "C#",
-          "level": 9
+          "level": 7
         },
         {
           "name": "C++",
-          "level": 8
+          "level": 5
         }
       ]
     },
@@ -35,7 +35,7 @@ app.controller("SkillsetController", ["$scope", function ($scope) {
         },
         {
           "name": "CSS",
-          "level": 8
+          "level": 5
         }
       ]
     },
@@ -52,15 +52,15 @@ app.controller("SkillsetController", ["$scope", function ($scope) {
         },
         {
           "name": "SASS",
-          "level": 9
+          "level": 5
         },
         {
           "name": "Struts",
-          "level": 8
+          "level": 5
         },
         {
           "name": "React",
-          "level": 7
+          "level": 4
         }
       ]
     },
@@ -73,7 +73,7 @@ app.controller("SkillsetController", ["$scope", function ($scope) {
         },
         {
           "name": "DB2",
-          "level": 10
+          "level": 9
         }
       ]
     }
