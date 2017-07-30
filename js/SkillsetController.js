@@ -2,7 +2,7 @@ app.controller("SkillsetController", ["$scope", function ($scope) {
   $scope.title = "Skillset";
   $scope.skillsetCategories = [
     {
-      "title": "Backend",
+      "title": "Programming",
       "skills": [
         {
           "name": "Java",
@@ -43,7 +43,7 @@ app.controller("SkillsetController", ["$scope", function ($scope) {
       "title": "Frameworks",
       "skills": [
         {
-          "name": "Angular",
+          "name": "AngularJS",
           "level": 9
         },
         {
@@ -57,6 +57,10 @@ app.controller("SkillsetController", ["$scope", function ($scope) {
         {
           "name": "Struts",
           "level": 5
+        },
+        {
+          "name": "Angular2",
+          "level":"5"
         },
         {
           "name": "React",
