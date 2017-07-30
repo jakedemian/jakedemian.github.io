@@ -73,47 +73,27 @@
                 <div id="experience" ng-controller="ExperienceController">
                     <h2>{{title}}</h2>
                     <ul class="experienceList">
-                        <li class="expEntry">
+                        <li class="expEntry" ng-repeat="exp in expList">
                             <div class="expInfo">
                                 <div class="expTitleContainer">
-                                    <h4>Nanotronics Imaging</h4>
-                                    <img class="expLogo" src="assets/nano_logo.png" style="margin-top: 20px;"/>
-                                </div>  
-                                <div class="expDescContainer">
-                                    <p>Designed and developed desktop application to control automated silicon wafer inspection system.</p>
-                                    <br />
-                                    <p>Languages used:  C++, Embedded C, MATLAB</p>
-                                    <p>Notable Projects: <a href="http://www.nanotronics.co/technology/" target="_blank" class="link">NSPEC</a></p>
+                                    <h4>{{exp.name}}</h4>
+                                    <img class="expLogo" src="{{exp.logoPath}}" style="{{exp.logoStyleTweak}}"/>
                                 </div>
-                            </div>
-                        </li>
-                        <li class="expEntry">
-                            <div class="expInfo">
-                                <div class="expTitleContainer">
-                                    <h4>STERIS Corporation</h4>
-                                    <img class="expLogo" src="assets/steris_logo.png"/>
-                                </div>  
                                 <div class="expDescContainer">
-                                    <p>Worked to create a brand new type of surgical lighting system.  Worked with both hardware and softwware.</p>
+                                    <p>{{exp.desc}}</p>
                                     <br />
-                                    <p>Languages used:  C++, VB, Embedded C</p>
-                                    <p>Notable Projects: <a href="http://www.steris.com/products/surgical-lights/harmony-led-surgical-lighting-and-visualization-system" target="_blank" class="link">Harmony LED/vLED</a></p>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="expEntry">
-                            <div class="expInfo">
-                                <div class="expTitleContainer">
-                                    <h4>SapientRazorfish</h4>
-                                    <img class="expLogo" src="assets/sapientrazorfish_logo.png"/>
-                                </div>  
-                                <div class="expDescContainer">
-                                    <p>Design, implement, and maintain large-scale e-commerce sites using Websphere Commerce.</p>
-                                    <br />
-                                    <p>Languages used:  Java, JavaScript (+Angular, +jQuery), HTML, CSS, DB2 (SQL)</p>
-                                    <p>Notable Projects: <a href="http://www.sherwin-williams.com/" target="_blank" class="link">Sherwin-Williams</a>,
-                                        &nbsp;
-                                        <a href="http://www.steris.com/healthcare/service-and-service-parts/steris-service-parts/" target="_blank" class="link">STERIS</a></p>
+                                    <p>
+                                        Languages used:
+                                        <span ng-repeat="lang in exp.langList">
+                                            {{lang}}<span ng-if="!$last">,</span>
+                                        </span>
+                                    </p>
+                                    <p>
+                                        Notable projects:
+                                        <a ng-repeat="proj in exp.projects" href="{{proj.url}}" target="_blank" class="link">
+                                            {{proj.name}}<span ng-if="!$last">,</span>
+                                        </a>
+                                    </p>
                                 </div>
                             </div>
                         </li>
