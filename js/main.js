@@ -172,9 +172,9 @@ function postCopy(ele) {
  * @param {Element Object} ele 
  */
 function copyPhone(ele) {
-    var npaCode = "440";
-    var centralOfficeCode = "897";
-    var subscriberNum = "1768";
+    var npaCode = "216";
+    var centralOfficeCode = "217";
+    var subscriberNum = "2177";
     copySensitiveText(npaCode + centralOfficeCode + subscriberNum);
     postCopy(ele);
 }
