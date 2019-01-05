@@ -12,9 +12,11 @@ var nowDate = new Date();
 var aboutMeJson = {
     "name": "Jacob R. Demian",
     "age": getExactAge().toFixed(10),
-    "title": "Software Engineer",
+    "title": "Computer Engineer",
     "pets": "dog",
     "interests": [
+        "sports",
+        "game design",
         "programming",
         "working out",
         "watching space documentaries",
