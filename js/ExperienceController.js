@@ -15,7 +15,7 @@ app.controller("ExperienceController", ["$scope", function($scope){
       "projects":[
         {
           "name":"NSPEC",
-          "url":"http://www.nanotronics.co/technology/"
+          "url":"https://nanotronics.co/products/"
         }
       ]
     },
