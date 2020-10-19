@@ -72,7 +72,7 @@ function typeName(endIdx) {
 function toggleCursorFlash() {
     var nameElement = $("#name");
     var nameStr = nameElement.html().trim();
-    var suffix = nameStr.indexOf("_") == -1 ? "<span id='underscore'>_</span>" : " ";
+    var suffix = nameStr.indexOf("_") == -1 ? "<span id='underscore'>_</span>" : "<span id='underscore' class='typed-space'></span>";
 
     nameElement.html(Constants.NAME + suffix);
     setTimeout(function () { toggleCursorFlash() }, 500);
