@@ -7,8 +7,8 @@ app.controller("ExperienceController", ["$scope", function($scope){
       "logoPath":"assets/hs-logo-square.png",
       "logoStyleTweak":"",
       // TODO insert sg link here when released
-      "desc":"Create and maintain health-street.net and [insert sg name here once released], which are drug testing " +
-          "and onboarding websites that manage tens of thousands of businesses and clients.",
+      "desc":"Create and maintain health-street.net, which is a drug testing " +
+          "and onboarding service ordering platform that manages tens of thousands of businesses and clients.",
       "langList":[
         "JavaScript (vanilla + ReactJS + node)",
         "PHP",
@@ -22,10 +22,10 @@ app.controller("ExperienceController", ["$scope", function($scope){
           "name":"health-street.net",
           "url":"https://www.health-street.net/"
         },
-        {
-          "name":"[insert sg link here when released]", // TODO insert sg link here when released
-          "url":"javascript:void(0)" // TODO insert sg link here when released
-        }
+        // {
+        //   "name":"[insert sg link here when released]", // TODO insert sg link here when released
+        //   "url":"javascript:void(0)" // TODO insert sg link here when released
+        // }
       ]
     },
     {
