@@ -17,8 +17,8 @@
     <body ng-app="mainApp">
         <div class="wrapper">
             <div class="mainContent">
-                <div class="left">
-                    <div>
+                <div class="nav">
+                    <div class="typed-name">
                         <h1 id="name" unselectable="on"><span id="underscore">_</span></h1>
                     </div>
                     <a href="javascript:void(0);" onclick="javascript:linkClicked(this);" data-link-key="about" class="mainLink">About</a><br/>
@@ -26,7 +26,7 @@
                     <a href="javascript:void(0);" onclick="javascript:linkClicked(this);" data-link-key="experience" class="mainLink">Experience</a><br/>
                     <a href="javascript:void(0);" onclick="javascript:linkClicked(this);" data-link-key="contact" class="mainLink">Contact</a><br/>
                 </div>                
-                <div id="textContent" class="right"></div>
+                <div class="textContentContainer"><div id="textContent"></div></div>
             </div>
 
             <div class="hiddenContent" style="display: none;">
@@ -52,6 +52,7 @@
                 <div id="skillset" ng-controller="SkillsetController">
                     <h2>{{title}}</h2>
                     <div class="skillListContainer" id="skillListContainer">
+                        <div class="skillListInnerContainer">
                         <ul class="skillCategoriesList">
                             <li class="skillCategory" ng-repeat="category in skillsetCategories">
                                 <h3>{{category.title}}</h3>
@@ -67,6 +68,7 @@
                         </ul>
                         <div class="skillLine" ng-repeat="line in skillLines" style="left: {{line.leftOffset}};">
                             <span class="skillLineDesc">{{line.desc}}</span>
+                        </div>
                         </div>
                     </div>
                 </div>

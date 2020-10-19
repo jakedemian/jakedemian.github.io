@@ -13,17 +13,25 @@ var aboutMeJson = {
     "name": "Jacob R. Demian",
     "age": getExactAge().toFixed(10),
     "title": "Computer Engineer",
-    "pets": "dog",
+    "pets": {
+        "dogs": [
+            "vito"
+        ],
+        "cats": [
+            "frank",
+            "randy"
+        ]
+    },
     "interests": [
-        "sports",
         "game design",
         "programming",
-        "working out",
+        "running",
+        "Cleveland sports",
         "watching space documentaries",
-        "video games"
+        "playing video games"
     ],
-    "numOfTimesWatchedSuperbad": 37,
-    "numOfSandwichesEaten": (Math.floor(getExactAge() * 365))
+    "numOfTimesWatchedSuperbad": 38,
+    "approxNumOfSandwichesEaten": (Math.floor(getExactAge() * 365))
 }
 
 // the key of the current page

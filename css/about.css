@@ -1,16 +1,14 @@
-.aboutMainLeft{
-    float: left;
-    width: 50%;
-    line-height: 1.5;
-}
-
-.aboutMainRight{
-    margin-left: 50%;
+.aboutMain {
+    margin: auto;
+    width: 100%;
+    display: flex;
+    align-items: center;
 }
 
 .aboutImg{
     border-radius: 100%;
     width: 200px;
+    margin-left: 32px;
 }
 
 .dividerContainer{
@@ -26,4 +24,24 @@
     height: 3px;
     background-color: #4286f4;
     margin: 0 auto;
+}
+
+@media only screen and (max-width: 800px) {
+    .aboutMain {
+        margin: auto;
+        width: 70%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .aboutImg {
+        margin-left: 0;
+    }
+
+    .aboutMeJsonContainer{
+        text-align: left;
+        display: flex;
+        justify-content: center;
+    }
 }

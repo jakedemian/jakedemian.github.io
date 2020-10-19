@@ -51,3 +51,13 @@
 #tempTxt{
     opacity: 0;
 }
+
+@media only screen and (max-width: 800px) {
+    .copyLink {
+        display: unset;
+    }
+
+    .contactContent h4{
+        margin-top: 64px;
+    }
+}

@@ -5,7 +5,7 @@ app.controller("SkillsetController", ["$scope", function ($scope) {
       "title": "Programming",
       "skills": [
         {
-          "name": "Java",
+          "name": "JavaScript",
           "level": 10
         },
         {
@@ -14,7 +14,11 @@ app.controller("SkillsetController", ["$scope", function ($scope) {
         },
         {
           "name": "C#",
-          "level": 7
+          "level": 8
+        },
+        {
+          "name": "Java",
+          "level": 5
         },
         {
           "name": "C++",
@@ -26,16 +30,12 @@ app.controller("SkillsetController", ["$scope", function ($scope) {
       "title": "Frontend",
       "skills": [
         {
-          "name": "Javascript",
+          "name": "HTML",
           "level": 10
         },
         {
-          "name": "HTML",
-          "level": 9
-        },
-        {
           "name": "CSS",
-          "level": 5
+          "level": 10
         }
       ]
     },
@@ -43,29 +43,21 @@ app.controller("SkillsetController", ["$scope", function ($scope) {
       "title": "Frameworks",
       "skills": [
         {
-          "name": "AngularJS",
+          "name": "React",
           "level": 9
         },
         {
           "name": "jQuery",
-          "level": 9
+          "level": 8
         },
         {
           "name": "SASS",
-          "level": 5
+          "level": 8
         },
         {
-          "name": "Struts",
-          "level": 5
+          "name": "AngularJS",
+          "level": 6
         },
-        {
-          "name": "Angular2",
-          "level":"5"
-        },
-        {
-          "name": "React",
-          "level": 4
-        }
       ]
     },
     {
@@ -73,12 +65,16 @@ app.controller("SkillsetController", ["$scope", function ($scope) {
       "skills": [
         {
           "name": "MySQL",
-          "level": 10
+          "level": 8
         },
         {
           "name": "DB2",
-          "level": 9
-        }
+          "level": 6
+        },
+        {
+          "name": "Filemaker Pro",
+          "level": 5
+        },
       ]
     }
   ];
@@ -101,7 +97,7 @@ app.controller("SkillsetController", ["$scope", function ($scope) {
       "leftOffset": "373px"
     },
     {
-      "desc":"I'm pretty good at this",
+      "desc":"I'm very good at this",
       "leftOffset": "448px"
     }
   ]

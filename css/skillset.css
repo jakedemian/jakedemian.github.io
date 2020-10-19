@@ -39,3 +39,29 @@
     -webkit-transform: rotate(-35deg); /* Chrome, Safari, Opera */
     transform: rotate(-35deg);
 }
+
+@media only screen and (max-width: 800px){
+    .skillListContainer{
+        margin-top: 96px;
+        display: flex;
+        justify-content: center;
+        /*zoom: 58%;*/
+    }
+    .skillCategory {
+        text-align: left;
+    }
+    .skillsList {
+        text-align: left;
+    }
+
+
+    .skillListInnerContainer{
+        position: relative;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .skillListContainer{
+        zoom: 58%;
+    }
+}
