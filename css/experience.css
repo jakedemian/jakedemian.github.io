@@ -47,6 +47,9 @@
 }
 
 @media only screen and (max-width: 800px){
+    .experienceList{
+        margin-bottom:128px;
+    }
     .expInfo {
         height: unset;
         padding: 0 16px;

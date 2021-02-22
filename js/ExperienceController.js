@@ -22,10 +22,10 @@ app.controller("ExperienceController", ["$scope", function($scope){
           "name":"health-street.net",
           "url":"https://www.health-street.net/"
         },
-        // {
-        //   "name":"[insert sg link here when released]", // TODO insert sg link here when released
-        //   "url":"javascript:void(0)" // TODO insert sg link here when released
-        // }
+        {
+          "name":"StaffGlass",
+          "url":"https://www.staffglass.io/"
+        }
       ]
     },
     {
@@ -46,6 +46,10 @@ app.controller("ExperienceController", ["$scope", function($scope){
           "url":"http://www.sherwin-williams.com/"
         },
         {
+          "name":"Luxottica",
+          "url":"http://www.luxottica.com/en/eyewear-brands"
+        },
+        {
           "name":"steris.com (service parts store)",
           "url":"http://www.steris.com/healthcare/service-and-service-parts/steris-service-parts/"
         }
@@ -64,7 +68,7 @@ app.controller("ExperienceController", ["$scope", function($scope){
       "projects":[
         {
           "name":"Harmony LED/vLED",
-          "url":"http://www.steris.com/products/surgical-lights/harmony-led-surgical-lighting-and-visualization-system"
+          "url":"https://www.steris.com/healthcare/products/surgical-lights-and-examination-lights/surgical-lights"
         }
       ]
     },

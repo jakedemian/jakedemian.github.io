@@ -1,5 +1,7 @@
 .skillListContainer{
     position: relative;
+    margin-top:64px;
+
 }
 
 .skillCategoriesList{
@@ -29,15 +31,15 @@
 }
 
 .skillLineDesc{
-    color: #ccc;
+    color: #aaa;
     font-size: 10px;
-    white-space: nowrap;
     display: block;
     margin-top: -20px;
     
-    -ms-transform: rotate(-35deg); /* IE 9 */
-    -webkit-transform: rotate(-35deg); /* Chrome, Safari, Opera */
-    transform: rotate(-35deg);
+    -ms-transform: rotate(-35deg) translate(-35px, 0); /* IE 9 */
+    -webkit-transform: rotate(-35deg) translate(-35px, 0); /* Chrome, Safari, Opera */
+    transform: rotate(-35deg) translate(-12px, -27px);
+    width: 72px;
 }
 
 @media only screen and (max-width: 800px){
@@ -62,6 +64,6 @@
 
 @media only screen and (max-width: 600px) {
     .skillListContainer{
-        zoom: 58%;
+        zoom: 71%;
     }
 }
