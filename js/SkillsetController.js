@@ -36,11 +36,15 @@ app.controller("SkillsetController", ["$scope", function ($scope) {
         {
           "name": "CSS",
           "level": 10
+        },
+        {
+          "name": "UI/UX",
+          "level": 9
         }
       ]
     },
     {
-      "title": "Frameworks",
+      "title": "Tools/Frameworks",
       "skills": [
         {
           "name": "React",
@@ -52,6 +56,10 @@ app.controller("SkillsetController", ["$scope", function ($scope) {
         },
         {
           "name": "SASS",
+          "level": 8
+        },
+        {
+          "name": "AWS",
           "level": 8
         },
         {
