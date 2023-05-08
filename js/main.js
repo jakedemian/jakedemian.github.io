@@ -13,6 +13,7 @@ var aboutMeJson = {
     "name": "Jacob R. Demian",
     "age": getExactAge().toFixed(10),
     "title": "Computer Engineer",
+    "children": 1,
     "pets": {
         "dogs": [
             "vito"
